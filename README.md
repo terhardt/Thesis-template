@@ -11,6 +11,9 @@ It features chapter-wise bibliographies and a publication list in the end.
 The template splits all the different parts of the thesis into separate files
 for easier version control.
 
+The main file is `thesis.tex` which contains the preamble, author, title, date
+variables as well as the include statements for the different sub-files.
+
 The main title/cover block is set in the `title.tex` file  which is than
 included in the `cover.tex` and `titlepage.tex` files to make sure that the same
 author and title is present on both.
