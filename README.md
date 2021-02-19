@@ -13,4 +13,4 @@ for easier version control.
 
 The main title/cover block is set in the `title.tex` file  which is than
 included in the `cover.tex` and `titlepage.tex` files to make sure that the same
-Author and title is present on both.
+author and title is present on both.
