@@ -1,0 +1,73 @@
+\documentclass[11pt, BCOR=17.5mm, a4paper, twoside, parskip=half+, captions=tableheading, toc=bib, abstract, openright]{scrreprt}
+\usepackage{pdfpages}
+% Set language of document
+\usepackage[english]{babel}
+\usepackage{lipsum}
+
+% Fonts:
+%   fontspec can be used to pick system availabel fonts
+%   use TeX Ligatures
+%   use unicode symbols in math environments, enables setting for math font
+%   set Fontin as roman font
+%   set Fontin Sans as San Serif Font
+%   set XITS Math as Math font
+\usepackage{amsmath}
+\usepackage{mathtools}
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+% \usepackage{unicode-math}
+
+\usepackage{color,graphicx,lscape, subfig}
+\usepackage{enumitem}
+\usepackage{booktabs, threeparttable}
+%\usepackage[version=3]{mhchem}
+% set up captions for figures and tables
+\usepackage{csquotes}
+\usepackage{caption}
+\captionsetup{format=plain, font=small, labelfont={bf,sf}}
+\captionsetup[figure]{format=plain, width=0.95\textwidth}
+\captionsetup[table]{format=plain, width=0.95\textwidth}
+\captionsetup[subfigure]{margin=10pt, labelfont={bf,sf}}
+
+\usepackage[detect-all, separate-uncertainty = true]{siunitx}
+\sisetup{copy-decimal-marker=true, output-decimal-marker={.}, range-phrase =~--~, range-units = brackets, list-units = single, list-final-separator=~and~, math-micro=\text{µ}, text-micro=µ}
+% define extra units for siunitx
+\DeclareSIUnit{\AD}{AD}
+\DeclareSIUnit{\BC}{BC}
+\DeclareSIUnit{\year}{a}
+\DeclareSIUnit{\yr}{yr}
+\DeclareSIUnit{\ie}{(i.e.)}
+\DeclareSIUnit{\we}{(w.e.)}
+\DeclareSIUnit{\a}{a}
+
+
+% BibTeX:
+%   use biblatex for typesetting with natbib compatibility mode
+\usepackage[natbib=true, backend=biber, style=authoryear-comp, dashed=false, sorting=ynt, sortcites=true, doi=false, url=false, minnames=1, maxnames=2, uniquelist=false, maxbibnames=99, firstinits=true]{biblatex}
+\addbibresource{references.bib}
+\assignrefcontextentries[]{*}
+\DeclareNameAlias{sortname}{last-first}
+\AtEveryBibitem{\clearfield{day}\clearfield{month}\clearfield{endday}\clearfield{endmonth}}
+\setlength{\bibitemsep}{1.5\itemsep}
+% Use hidden hyperlinks
+\usepackage[unicode,pdfborder={0 0 0}]{hyperref}
+\urlstyle{same}
+
+\title{Title of the Thesis}
+\author{Name}
+\date{Date}
+
+\begin{document}
+\include{cover}
+\include{titlepage}
+\include{quote}
+\include{summary}
+\tableofcontents
+\include{intro}
+\include{chapter}
+\include{paper}
+\appendix
+\include{publist}
+\include{acknowledgments}
+\include{declaration}
+\end{document}
